@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Reset styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styles */
+        body {
+            font-family: 'Helvetica', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+        /* Header styles */
+        header {
+            background-color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333333;
+            font-size: 32px;
+        }
+
+        /* Navigation styles */
+        nav {
+            background-color: #333333;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        nav ul li:last-child {
+            margin-right: 0;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px 20px;
+        }
+
+        h2 {
+            color: #333333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            color: #666666;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Project styles */
+        .project {
+            border: 1px solid #cccccc;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .project h3 {
+            color: #333333;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #666666;
+            font-size: 16px;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #333333;
+            color: #ffffff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section id="home">
+        <img src="https://scontent.fmnl25-4.fna.fbcdn.net/v/t39.30808-1/297009661_3321436618179217_1390438590305842276_n.jpg?stp=dst-jpg_s480x480&_nc_cat=105&ccb=1-7&_nc_sid=5f2048&_nc_eui2=AeFphYuXpU-EbK2BADuIA6UZyKESpuURaSXIoRKm5RFpJW-gYwGFxyHQ1RphJpqnnnT3D5-o7bcSnv6Oc5cAvVBg&_nc_ohc=RCqHJp7iZFEAb4IovOR&_nc_ht=scontent.fmnl25-4.fna&oh=00_AfDzvPITV1Mrigg_pUPMdBPZ6aiiDdJHfbIJnuxm_VE3bQ&oe=66243E23" alt="Christian Rivera">
+        <p>Hanzelmae Antolin</p>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Like watching movies</p>
+        <p>Love travelling</p>
+        <p>Love playing volleyball</p>
+        <p>Like cars a lot</p>
+        <p>Like eating icecream</p>
+    </section>
+
+    <section id="portfolio">
+        <h2>Portfolio</h2>
+        <div class="project">
+            <h3>Web Development Projects:</h3>
+            <ul>
+                <li>Personal website/portfolio: Showcase your skills, projects, and experience.</li>
+                <li>E-commerce website: Design and develop an online store.</li>
+                <li>Blogging platform: Create a platform for writing and sharing articles.</li>
+                <li>Content management system (CMS): Build a system for managing digital content.</li>
+                <li>Social media platform: Develop a platform for social networking.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Cybersecurity Projects:</h3>
+            <ul>
+                <li>Network security assessment: Conduct a security assessment of a network and propose recommendations.</li>
+                <li>Penetration testing: Perform simulated attacks on a system to identify vulnerabilities.</li>
+                <li>Security monitoring tool: Develop a tool to monitor and analyze security events in real-time.</li>
+                <li>Secure coding guidelines: Create guidelines and best practices for writing secure code.</li>
+                <li>Incident response plan: Develop a plan for responding to cybersecurity incidents.</li>
+            </ul>
+        </div>
+        <div class="project">
+            <h3>Mobile App Development Projects:</h3>
+            <ul>
+                <li>Task management app: Create an app for organizing tasks and schedules.</li>
+                <li>Fitness tracker app: Design an app to track fitness goals and progress.</li>
+                <li>Recipe app: Develop an app for browsing and saving recipes.</li>
+                <li>Language learning app: Build an app to learn and practice languages.</li>
+                <li>Finance management app: Create an app for budgeting and expense tracking.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: hanzelmae@gmail.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript code here
+        document.addEventListener('DOMContentLoaded', function() {
+            var contactSection = document.getElementById('contact');
+            var contactHeader = contactSection.querySelector('h2');
+            var contactContent = contactSection.querySelector('p');
+
+            // Initially hide the contact section
+            contactSection.style.display = 'none';
+
+            // Function to toggle the visibility of the contact section
+            function toggleContact() {
+                if (contactSection.style.display === 'none') {
+                    contactSection.style.display = 'block';
+                } else {
+                    contactSection.style.display = 'none';
+                }
+            }
+
+            // Event listener for clicking the contact header
+            contactHeader.addEventListener('click', toggleContact);
+            // Event listener for clicking the contact content
+            contactContent.addEventListener('click', toggleContact);
+        });
+    </script>
+</body>
+</html>
